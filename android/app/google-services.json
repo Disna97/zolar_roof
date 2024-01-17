@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "331103619229",
+    "project_id": "zolar-roof-6f718",
+    "storage_bucket": "zolar-roof-6f718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331103619229:android:927c7238170eaecbe56c74",
+        "android_client_info": {
+          "package_name": "com.example.zolar_roof"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs7Ef83EiKJxOlJtS1H4NZ2zSdPpQN9gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
