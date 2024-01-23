@@ -3,45 +3,26 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
-import 'package:zolar_roof/provider/admin_provider/signin_provider.dart';
-import 'package:zolar_roof/screens/admin_module/create_accout_screen.dart';
 import 'package:zolar_roof/screens/admin_module/dashboard.dart';
 import 'package:zolar_roof/utils/utils.dart';
 import '../../../constants/constants.dart';
 import '../../../resources/color_resources.dart';
 import '../../../resources/drawable_resoruces.dart';
 import '../../../resources/style_resource.dart';
-
-
 class AdminLoginScreen extends StatefulWidget {
   const AdminLoginScreen({Key? key}) : super(key: key);
-
   @override
   _AdminLoginScreenState createState() => _AdminLoginScreenState();
 }
-
 class _AdminLoginScreenState extends State<AdminLoginScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final DatabaseReference _database = FirebaseDatabase.instance.reference();
-
-
   TextEditingController userNameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
-
-  @override
-  void initState() {
-
-    super.initState();
-  }
-
-
   @override
   void dispose() {
     userNameController.dispose();
     passwordController.dispose();
-
     super.dispose();
   }
 
@@ -49,22 +30,18 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _renderBodyMain(),
-
     );
   }
-
   Widget _authFields() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         Constants.textFormFeildsDesign(context, userNameController, "UserName", Icons.account_box_outlined),
         const SizedBox(height: 10,),
         Constants.textFormFeildsDesign(context, passwordController, "Password", Icons.password),
         const SizedBox(height: 10,),],
     );
   }
-
   _renderBodyMain() {
     return SingleChildScrollView(
       child: Column(
@@ -74,7 +51,6 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       ),
     );
   }
-
   _renderMainHead() {
     return Stack(
       children: [
@@ -89,13 +65,9 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
             child: Image.asset(
               DrawableResource.swiper2,fit: BoxFit.cover,
             )),
-
       ],
     );
   }
-
-
-
   _rendSubHead() {
     return SingleChildScrollView(
       child: Container(
@@ -141,21 +113,17 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
     );
   }
 
-
-
   _renderSizedBox(double height) {
     return SizedBox(
       height: height,
     );
   }
-
   _renderLoginText() {
     return Text(
       "Admin Login",
       style: StyleResource.smallBlackNormalTextStyle(context).copyWith(fontSize: 20),
     );
   }
-
   _renderLoginDescription(String description) {
     return Text(
       description,
