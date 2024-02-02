@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zolar_roof/provider/admin_provider/compliant_status_provider.dart';
+import 'package:zolar_roof/provider/admin_provider/quation_provider.dart';
 import 'package:zolar_roof/provider/admin_provider/signin_provider.dart';
 import 'package:zolar_roof/provider/userprovider/compliant_provider.dart';
 import 'package:zolar_roof/provider/userprovider/login_provider.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => ComplaintViewModel()),
         ChangeNotifierProvider(create: (context) => CompliantStatusProvider()),
         ChangeNotifierProvider(create: (context) => ServiceProvider()),
+        ChangeNotifierProvider(create: (context) => QuationProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:zolar_roof/screens/user_module/screens/print_screen.dart';
 import 'package:zolar_roof/screens/user_module/screens/profile_screen.dart';
 import 'package:zolar_roof/screens/user_module/screens/service_screen.dart';
 
@@ -53,6 +54,11 @@ class _UserDashBoardState extends State<UserDashBoard> {
             icon: Icon(Icons.contact_page_outlined,color: Colors.blue,),
             label: 'Profile',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contact_page_outlined,color: Colors.blue,),
+            label: 'Print',
+          ),
+
         ],
       ),
     );
@@ -68,6 +74,8 @@ class _UserDashBoardState extends State<UserDashBoard> {
         return ServiceScreen(); // Replace YourServiceScreen with the actual screen for "Service"
       case 3:
         return ProfileScreen();
+      case 4:
+        return PrintScreen();
       default:
         return Container();
     }

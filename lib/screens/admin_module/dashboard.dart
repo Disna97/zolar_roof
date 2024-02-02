@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:zolar_roof/screens/admin_module/create_accout_screen.dart';
+import 'package:zolar_roof/screens/admin_module/quation.dart';
 
 import 'complaint_view_page.dart';
 
@@ -40,6 +41,10 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
             icon: Icon(Icons.message),
             label: 'Complaint View',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.accessibility),
+            label: 'Quations',
+          ),
 
         ],
       ),
@@ -52,6 +57,8 @@ class _AdminDashBoardState extends State<AdminDashBoard> {
         return CreateAnAccount();
       case 1:
         return CompliantViewPage();
+      case 2:
+        return QuatationScreen();
 
       default:
         return Container();
